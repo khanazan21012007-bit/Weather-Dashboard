@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Weather | Modern Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="dashboard">
+      <div class="header">
+        <div class="logo">
+          <span class="material-icons-round" style="font-size: 26px"
+            >wb_sunny</span
+          >
+          <span>AuraWeather</span>
+        </div>
+        <button class="icon-btn" id="themeToggle" title="Toggle Theme">
+          <span class="material-icons-round" id="themeIcon">light_mode</span>
+        </button>
+      </div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          class="search-input"
+          placeholder="Search city or location..."
+        />
+        <button class="search-btn" id="searchBtn" title="Search">
+          <span class="material-icons-round">search</span>
+        </button>
+        <button class="icon-btn" id="geoBtn" title="Use Current Location">
+          <span class="material-icons-round">my_location</span>
+        </button>
+      </div>
+
+      <div class="recent-container" id="recentContainer" style="display: none">
+        <span class="recent-label">Recent:</span>
+        <div
+          id="recentChips"
+          style="display: flex; gap: 6px; flex-wrap: wrap"
+        ></div>
+      </div>
+      <div class="error-message" id="errorBox">
+        City not found. Please check your spelling.
+      </div>
+      <div class="state-box" id="loadingBox">
+        <div class="spinner"></div>
+        <p
+          style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500"
+        >
+          Fetching live weather data...
+        </p>
+      </div>
+
+      <div class="weather-info" id="weatherContent">
+        <div class="location-info">
+          <div class="city-name" id="cityName">London</div>
+          <div class="country-name" id="countryName">United Kingdom</div>
+        </div>
+
+        <div class="main-weather">
+          <div class="temperature" id="tempValue">22°C</div>
+          <div class="condition-group">
+            <div class="weather-icon-wrapper" id="weatherIcon">
+              <span
+                class="material-icons-round"
+                style="font-size: 32px; color: #6366f1"
+                >partly_cloudy_day</span
+              >
+            </div>
+            <div class="condition-text" id="conditionText">Partly Cloudy</div>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-title">
+              <span
+                class="material-icons-round"
+                style="font-size: 15px; color: #38bdf8"
+                >water_drop</span
+              >
+              Humidity
+            </div>
+            <div class="detail-value" id="humidityValue">64%</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-title">
+              <span
+                class="material-icons-round"
+                style="font-size: 15px; color: #f43f5e"
+                >air</span
+              >
+              Wind Speed
+            </div>
+            <div class="detail-value" id="windValue">12 km/h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./Script.js"></script>
+  </body>
+</html>

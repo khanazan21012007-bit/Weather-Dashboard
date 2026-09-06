@@ -14,7 +14,7 @@ Recent Searches History: Quick access chips for your recently searched cities, p
 
 Fully Responsive Design: Optimized layout that adapts smoothly across mobile phones, tablets, and desktop displays.
 
-🛠️ Tech Stack
+ Tech Stack
 HTML5: Semantic markup structure.
 
 CSS3: Custom properties (CSS variables), Flexbox, CSS Grid, backdrop filters, and keyframe animations.
